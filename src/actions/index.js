@@ -1,10 +1,18 @@
 import axios from 'axios';
 
-export const CHANGE_SEARCHINPUTACTIVE = 'CHANGE_SEARCHINPUTACTIVE';
+export const SELECT_SEARCHINPUT = 'SELECT_SEARCHINPUT';
 
-export function changeSearchInputActive() {
+export function selectSearchInput() {
   return {
-    type: CHANGE_SEARCHINPUTACTIVE
+    type: SELECT_SEARCHINPUT
+  };
+}
+
+export const UNSELECT_SEARCHINPUT = 'UNSELECT_SEARCHINPUT';
+
+export function unselectSearchInput() {
+  return {
+    type: UNSELECT_SEARCHINPUT
   };
 }
 
@@ -35,7 +43,7 @@ export function selectPost(post) {
   return {
     type: SELECT_POST,
     post
-  }
+  };
 }
 
 export function openPostInReddit() {
@@ -43,5 +51,5 @@ export function openPostInReddit() {
 }
 
 export function emailPost() {
-  
+
 }

@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import { searchBar } from './searchBar';
-import { postList } from './postList';
+import searchBar from './searchBar';
+import postList from './postList';
 
-const index = combineReducers({
+export default combineReducers({
   searchBar,
   postList
 });
-
-export default twitchmore;
