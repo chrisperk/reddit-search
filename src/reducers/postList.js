@@ -19,6 +19,7 @@ function selectedPost(state = {}, action) {
 const postList = combineReducers({
   searching,
   searchResults,
+  searchError,
   selectedPost
 });
 
