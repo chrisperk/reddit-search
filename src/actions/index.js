@@ -25,16 +25,26 @@ export function changeSearchTerm(searchTerm) {
   };
 }
 
-export function getSearchResultsStart() {
+export const GET_SEARCHRESULTS_SUCCESS = 'GET_SEARCHRESULTS_SUCCESS';
+export const GET_SEARCHRESULTS_ERROR = 'GET_SEARCHRESULTS_ERROR';
+export const GET_SEARCHRESULTS_START = 'GET_SEARCHRESULTS_START';
 
+export function getSearchResultsStart(searchTerm) {
+  pollSubreddit(searchTerm);
 }
 
-export function getSearchResultsSuccess() {
-
+export function getSearchResultsSuccess(results) {
+  return {
+    type: GET_SEARCHRESULTS_SUCCESS,
+    results
+  };
 }
 
-export function getSearchResultsError() {
-
+export function getSearchResultsError(message) {
+  return {
+    type: GET_SEARCHRESULTS_ERROR,
+    message
+  };
 }
 
 export const SELECT_POST = 'SELECT_POST';
@@ -52,4 +62,20 @@ export function openPostInReddit() {
 
 export function emailPost() {
 
+}
+
+function pollSubreddit(subreddit) {
+  return (dispatch) => {
+    axios.get(`http://www.reddit.com/r/${subreddit}/.json`)
+      .then(response => {
+        console.log(response.data.children);
+        dispatch(getSearchResultsSuccess(response.data.streams));
+      })
+      .catch(error => {
+        dispatch(getSearchResultsError(error));
+      });
+    dispatch({
+      type: GET_SEARCHRESULTS_START
+    });
+  };
 }

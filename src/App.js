@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import SearchBar from './components/searchBar/searchBar';
+import SearchBarContainer from './containers/SearchBarContainer';
 
 class App extends Component {
   render() {
     return (
-      <SearchBar />
+      <SearchBarContainer />
     );
   }
 }

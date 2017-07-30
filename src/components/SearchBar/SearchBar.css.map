@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,MAAO;EACL,aAAa,EAAE,cAAc;EAC7B,SAAG;IACD,OAAO,EAAE,MAAM;EAEjB,YAAM;IACJ,KAAK,EAAE,KAAK",
+"sources": ["Searchbar.scss"],
+"names": [],
+"file": "SearchBar.css"
+}
