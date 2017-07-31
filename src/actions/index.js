@@ -35,7 +35,7 @@ export function getSearchResultsStart(subreddit) {
       .then(response => {
         console.log(response);
         console.log(response.data.data.children);
-        dispatch(getSearchResultsSuccess(response.data.streams));
+        dispatch(getSearchResultsSuccess(response.data.data.children));
       })
       .catch(error => {
         dispatch(getSearchResultsError(error));
@@ -65,6 +65,15 @@ export const SELECT_POST = 'SELECT_POST';
 export function selectPost(post) {
   return {
     type: SELECT_POST,
+    post
+  };
+}
+
+export const UNSELECT_POST = 'UNSELECT_POST';
+
+export function unselectPost(post) {
+  return {
+    type: UNSELECT_POST,
     post
   };
 }
