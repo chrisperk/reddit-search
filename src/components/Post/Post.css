@@ -1,23 +1,18 @@
 li:hover {
   cursor: pointer;
-  background-color: #eff;
-}
+  background-color: #eff; }
 
 .post-body {
   width: calc(100% - 110px);
   display: inline-block;
   padding: 0 10px;
-  margin-left: 90px;
-
-  h3 {
-    margin-top: 0;
-  }
-}
+  margin-left: 90px; }
+  .post-body h3 {
+    margin-top: 0; }
 
 .post-info {
   display: inline-block;
-  margin-right: 50px;
-}
+  margin-right: 50px; }
 
 .image-cropper {
   display: inline-block;
@@ -26,9 +21,8 @@ li:hover {
   position: absolute;
   overflow: hidden;
   border-radius: 100%;
-  border: 2px solid #ccc;
+  border: 2px solid #ccc; }
+  .image-cropper img {
+    min-height: 90px; }
 
-  img {
-    min-height: 90px;
-  }
-}
+/*# sourceMappingURL=Post.css.map */

@@ -23,8 +23,9 @@ input {
   transition: width 0.5s ease 0s;
   border-radius: 10px;
   color: $light-blue;
-  height: 20px;
   vertical-align: middle;
+  padding: 5px;
+  font-size: 1em;
 }
 
 input.active {

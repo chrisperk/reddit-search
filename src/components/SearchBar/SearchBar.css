@@ -18,8 +18,9 @@ input {
   transition: width 0.5s ease 0s;
   border-radius: 10px;
   color: #67c2ef;
-  height: 20px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  padding: 5px;
+  font-size: 1em; }
 
 input.active {
   width: 240px; }
