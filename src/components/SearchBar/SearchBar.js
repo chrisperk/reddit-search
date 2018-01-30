@@ -1,30 +1,38 @@
-import React from 'react';
+import React, { Component} from 'react';
 import PropTypes from 'prop-types';
 import './SearchBar.css';
 
-const SearchBar = props => {
-  return (
-    <header>
-      <h1>Reddit Search</h1>
-      <span>{props.searchTerm}</span>
-      <input
-        type="text"
-        className="pull-right"
-        name="searchTerm"
-        // placeholder="funny"
-        value={props.searchTerm}
-        onClick={() => props.handleSelectSearchInput()}
-        onBlur={() => props.handleUnselectSearchInput()}
-        onChange={event => props.handleChangeSearchTerm(event.target.value)} />
-      <button
-        type="button"
-        className="pull-right"
-        onClick={() => props.handleSearchSubmit(props.searchTerm)}>
-          Search
-      </button>
-    </header>
-  );
-};
+class SearchBar extends Component {
+  render() {
+    return (
+      <header>
+        <div>
+          <h1>Reddit</h1>
+          <form
+            onSubmit={event => {
+              event.preventDefault();
+              this.props.handleSearchSubmit(this.props.searchTerm);
+            }}
+          >
+            <input
+              type="text"
+              className={this.props.searchInputActive ? 'active' : ''}
+              name="searchTerm"
+              value={this.props.searchTerm}
+              onClick={() => this.props.handleSelectSearchInput()}
+              onBlur={() => this.props.handleUnselectSearchInput()}
+              onChange={event => this.props.handleChangeSearchTerm(event.target.value)}
+            />
+          </form>
+        </div>
+      </header>
+    );
+  }
+
+  componentDidMount() {
+    this.props.handleSearchSubmit(this.props.searchTerm);
+  }
+}
 
 export default SearchBar;
 

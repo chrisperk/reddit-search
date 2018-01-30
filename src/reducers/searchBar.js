@@ -7,12 +7,10 @@ import {
 
 function searchInputActive(state = false, action) {
   if (action.type === SELECT_SEARCHINPUT) {
-    console.log('selected');
     return true;
   }
   if (action.type === UNSELECT_SEARCHINPUT) {
-    console.log('unselected');
-    return true;
+    return false;
   }
   return state;
 }
