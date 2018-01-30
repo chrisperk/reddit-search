@@ -9,10 +9,28 @@ li:hover {
   margin-left: 90px; }
   .post-body h3 {
     margin-top: 0; }
+  .post-body .post-author {
+    color: #67c2ef; }
 
 .post-info {
   display: inline-block;
   margin-right: 50px; }
+  .post-info .sprite-comments, .post-info .sprite-ups, .post-info .sprite-downs {
+    display: inline-block;
+    background-image: url(images/icon-sprite.png);
+    margin-right: 10px; }
+  .post-info .sprite-comments {
+    height: 16px;
+    width: 16px;
+    background-position: 0 0; }
+  .post-info .sprite-ups {
+    height: 16px;
+    width: 16px;
+    background-position: 0 -16px; }
+  .post-info .sprite-downs {
+    height: 16px;
+    width: 16px;
+    background-position: 0 16px; }
 
 .image-cropper {
   display: inline-block;

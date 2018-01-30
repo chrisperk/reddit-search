@@ -12,11 +12,39 @@ li:hover {
   h3 {
     margin-top: 0;
   }
+
+  .post-author {
+    color: #67c2ef;
+  }
 }
 
 .post-info {
   display: inline-block;
   margin-right: 50px;
+
+  .sprite-comments, .sprite-ups, .sprite-downs {
+    display: inline-block;
+    background-image: url(images/icon-sprite.png);
+    margin-right: 10px;
+  }
+
+  .sprite-comments {
+    height: 16px;
+    width: 16px;
+    background-position: 0 0;
+  }
+
+  .sprite-ups {
+    height: 16px;
+    width: 16px;
+    background-position: 0 -16px;
+  }
+
+  .sprite-downs {
+    height: 16px;
+    width: 16px;
+    background-position: 0 16px;
+  }
 }
 
 .image-cropper {
