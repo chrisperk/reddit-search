@@ -18,3 +18,17 @@ main {
     }
   }
 }
+
+ul.hide {
+  visibility: hidden;
+}
+
+.loading-space {
+  display: none;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.loading-space.show {
+  display: block;
+}
