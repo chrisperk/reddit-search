@@ -35,7 +35,7 @@
     margin-top: 10px;
     margin-bottom: 20px;
     color: #67c2ef; }
-  #post-drag-container :active {
+  #post-drag-container:active {
     cursor: grabbing;
     cursor: -moz-grabbing;
     cursor: -webkit-grabbing; }

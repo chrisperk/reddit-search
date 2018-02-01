@@ -13,7 +13,11 @@ const PostOverlay = props => {
         className={props.selectedPost ? 'show' : ''}
         onClick={event => props.handleUnselectPost(event)}
       >
-        <div id="post-drag-container" draggable="true">
+        <div
+          id="post-drag-container" 
+          draggable="true"
+          onDragStart={event => event.dataTransfer.setData('Text', this.id)}
+        >
           <div className="image-cropper">
             <img
               src={
