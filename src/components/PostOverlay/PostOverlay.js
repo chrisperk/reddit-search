@@ -29,25 +29,35 @@ const PostOverlay = props => {
             />
           </div>
           <h3 className="post-author">{props.selectedPost.data.author}</h3>
-          <span className="post-title">{props.selectedPost.data.title}</span>
-          <div className="post-info">
-            <div className="sprite-comments" />
-            <span>{props.selectedPost.data.num_comments} comments</span>
-          </div>
-          <div className="post-info">
-            <div className="sprite-ups" />
-            <span>{props.selectedPost.data.ups} ups</span>
+          <div className="post-title">{props.selectedPost.data.title}</div>
+          <div id="post-info-wrapper">
+            <div className="post-info">
+              <div className="sprite-comments" />
+              <span>{props.selectedPost.data.num_comments} comments</span>
+            </div>
+            <div className="post-info">
+              <div className="sprite-ups" />
+              <span>{props.selectedPost.data.ups} ups</span>
+            </div>
           </div>
         </div>
         <div id="drag-instructions-container">
           Drag the card on the left to the desired action
         </div>
         <div id="drag-receivers-container">
-          <div id="reddit-receiver" onClick={() => props.handleOpenPostInReddit(props.selectedPost)}>
-            <img src={redditLogo} alt="Reddit" />
+          <div
+            id="reddit-receiver"
+            onClick={() => props.handleOpenPostInReddit(props.selectedPost)}
+          >
+            <img src={redditLogo} alt="Reddit" className="transparent" />
+            <h3>Open on Reddit</h3>
           </div>
-          <div id="email-receiver" onClick={() => props.handleEmailPost(props.selectedPost)}>
-            <img src={mailLogo} alt="e-mail" />
+          <div 
+            id="email-receiver"
+            onClick={() => props.handleEmailPost(props.selectedPost)}
+          >
+            <img src={mailLogo} alt="e-mail" className="transparent" />
+            <h3>Email to a friend</h3>
           </div>
         </div>
       </section>
