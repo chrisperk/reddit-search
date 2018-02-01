@@ -60,9 +60,9 @@
 
 #drag-receivers-container {
   display: flex;
-  height: 50%;
+  height: 100%;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 
 #reddit-receiver, #email-receiver {

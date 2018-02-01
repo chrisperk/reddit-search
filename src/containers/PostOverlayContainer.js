@@ -21,7 +21,9 @@ const mapDispatchToProps = dispatch => {
         dispatch(unselectPost());
       }
     },
-    handleOpenPostInReddit: post => {
+    handleOpenPostInReddit: (event, post) => {
+      console.log(event);
+      event.preventDefault();
       window.open(baseLink + post.data.permalink);
     },
     handleEmailPost: post => {
