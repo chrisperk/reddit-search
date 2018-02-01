@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBarContainer from './containers/SearchBarContainer';
 import PostListContainer from './containers/PostListContainer';
+import PostOverlayContainer from './containers/PostOverlayContainer';
 import './App.css';
 
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="app-wrapper">
         <SearchBarContainer />
         <PostListContainer />
+        <PostOverlayContainer />
       </div>
     );
   }

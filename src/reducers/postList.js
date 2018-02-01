@@ -2,7 +2,9 @@ import { combineReducers } from 'redux';
 import {
   GET_SEARCHRESULTS_START,
   GET_SEARCHRESULTS_SUCCESS,
-  GET_SEARCHRESULTS_ERROR
+  GET_SEARCHRESULTS_ERROR,
+  SELECT_POST,
+  UNSELECT_POST
 } from '../actions/index';
 
 function searching(state = false, action) {
@@ -37,7 +39,13 @@ function searchError(state = false, action) {
   return state;
 }
 
-function selectedPost(state = {}, action) {
+function selectedPost(state = null, action) {
+  if (action.type === SELECT_POST) {
+    return action.post;
+  }
+  if (action.type === UNSELECT_POST) {
+    return null;
+  }
   return state;
 }
 

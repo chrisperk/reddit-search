@@ -71,17 +71,8 @@ export function selectPost(post) {
 
 export const UNSELECT_POST = 'UNSELECT_POST';
 
-export function unselectPost(post) {
+export function unselectPost() {
   return {
-    type: UNSELECT_POST,
-    post
+    type: UNSELECT_POST
   };
-}
-
-export function openPostInReddit() {
-
-}
-
-export function emailPost() {
-
 }

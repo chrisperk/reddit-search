@@ -1,5 +1,6 @@
 .list-wrapper {
-  background-color: #eee; }
+  background-color: #eee;
+  height: 100%; }
 
 main {
   width: 60%;
@@ -22,6 +23,7 @@ ul.hide {
   padding-top: 200px; }
 
 .loading-space.show {
-  display: block; }
+  display: block;
+  height: calc(100vh - 50px); }
 
 /*# sourceMappingURL=PostList.css.map */

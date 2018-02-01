@@ -1,5 +1,6 @@
 .list-wrapper {
   background-color: #eee;
+  height: 100%;
 }
 
 main {
@@ -31,4 +32,5 @@ ul.hide {
 
 .loading-space.show {
   display: block;
+  height: calc(100vh - 50px);
 }

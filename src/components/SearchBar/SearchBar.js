@@ -11,11 +11,13 @@ class SearchBar extends Component {
           <form
             onSubmit={event => {
               event.preventDefault();
+              document.getElementById('search-bar').blur();
               this.props.handleSearchSubmit(this.props.searchTerm);
             }}
           >
             <input
               type="text"
+              id="search-bar"
               className={this.props.searchInputActive ? 'active' : ''}
               name="searchTerm"
               value={this.props.searchTerm}

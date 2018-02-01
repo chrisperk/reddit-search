@@ -27,7 +27,6 @@ const mapDispatchToProps = dispatch => {
     },
     handleSearchSubmit: (searchTerm) => {
       dispatch(getSearchResultsStart(searchTerm));
-      dispatch(unselectSearchInput());
     }
   };
 };

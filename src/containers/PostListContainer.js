@@ -16,11 +16,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    handleSelectPost: () => {
-      dispatch(selectPost());
-    },
-    handleUnselectPost: () => {
-      dispatch(unselectPost());
+    handleSelectPost: post => {
+      dispatch(selectPost(post));
     }
   };
 };

@@ -9,9 +9,10 @@ const Post = props => {
       <div className="image-cropper">
         <img
           src={
-            props.thumbnail !== null &&
+            props.thumbnail &&
             props.thumbnail !== 'self' &&
-            props.thumbnail !== 'default' ?
+            props.thumbnail !== 'default' &&
+            props.thumbnail !== 'nsfw' ?
               props.thumbnail :
               defaultThumbnail
           }
@@ -32,7 +33,7 @@ const Post = props => {
         </div>
         <div className="post-info">
           <div className="sprite-downs" />
-          <span>{props.downs} downs</span>
+          <span>{props.num_crossposts} crossposts</span>
         </div>
       </div>
     </div>
@@ -46,6 +47,6 @@ Post.propTypes = {
   title: PropTypes.string,
   num_comments: PropTypes.number,
   ups: PropTypes.number,
-  downs: PropTypes.number,
+  num_crossposts: PropTypes.number,
   thumbnail: PropTypes.string
 };

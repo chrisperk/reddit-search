@@ -1,0 +1,28 @@
+#post-overlay-wrapper {
+  visibility: hidden;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#post-overlay-wrapper.show {
+  visibility: visible;
+}
+
+#post-drag-container {
+  height: 300px;
+  width: 300px;
+  background-color: #eee;
+  color: #111;
+  border: 1px solid #000;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.post-info {}
