@@ -21,7 +21,11 @@
   border: 2px solid #ccc;
   border-radius: 20px;
   text-align: center;
-  padding: 0 20px; }
+  padding: 0 20px;
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab; }
   #post-drag-container .post-title {
     margin-bottom: 20px; }
   #post-drag-container .image-cropper {
@@ -31,6 +35,10 @@
     margin-top: 10px;
     margin-bottom: 20px;
     color: #67c2ef; }
+  #post-drag-container :active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing; }
 
 #post-info-wrapper {
   margin-bottom: 10px;

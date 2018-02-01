@@ -13,7 +13,7 @@ const PostOverlay = props => {
         className={props.selectedPost ? 'show' : ''}
         onClick={event => props.handleUnselectPost(event)}
       >
-        <div id="post-drag-container">
+        <div id="post-drag-container" draggable="true">
           <div className="image-cropper">
             <img
               src={
@@ -47,14 +47,18 @@ const PostOverlay = props => {
         <div id="drag-receivers-container">
           <div
             id="reddit-receiver"
-            onClick={() => props.handleOpenPostInReddit(props.selectedPost)}
+            onDragEnter={event => event.preventDefault()}
+            onDragOver={event => event.preventDefault()}
+            onDrop={event => props.handleOpenPostInReddit(event, props.selectedPost)}
           >
             <img src={redditLogo} alt="Reddit" className="transparent" />
             <h3>Open on Reddit</h3>
           </div>
-          <div 
+          <div
             id="email-receiver"
-            onClick={() => props.handleEmailPost(props.selectedPost)}
+            onDragEnter={event => event.preventDefault()}
+            onDragOver={event => event.preventDefault()}
+            onDrop={() => props.handleEmailPost(props.selectedPost)}
           >
             <img src={mailLogo} alt="e-mail" className="transparent" />
             <h3>Email to a friend</h3>

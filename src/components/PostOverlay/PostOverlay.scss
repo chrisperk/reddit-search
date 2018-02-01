@@ -24,7 +24,11 @@
   border-radius: 20px;
   text-align: center;
   padding: 0 20px;
-  
+  cursor: move;
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+
   .post-title {
     margin-bottom: 20px;
   }
@@ -36,6 +40,12 @@
     margin-top: 10px;
     margin-bottom: 20px;
     color: #67c2ef;
+  }
+
+  :active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
   }
 }
 
