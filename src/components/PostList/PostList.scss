@@ -34,3 +34,15 @@ ul.hide {
   display: block;
   height: calc(100vh - 50px);
 }
+
+    @media(min-width: 770px) and (max-width: 1020px) {
+      main {
+        width: 80%;
+      }
+    }
+
+    @media(max-width: 769px) {
+      main {
+        width: 100%;
+      }
+    }

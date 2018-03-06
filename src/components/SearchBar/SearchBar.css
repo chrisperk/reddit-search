@@ -25,4 +25,10 @@ input {
 input.active {
   width: 240px; }
 
+@media (max-width: 769px) {
+  header div {
+    width: 90%; }
+  header h1 {
+    font-size: 1.6em; } }
+
 /*# sourceMappingURL=SearchBar.css.map */

@@ -7,7 +7,7 @@ class SearchBar extends Component {
     return (
       <header>
         <div>
-          <h1>Reddit</h1>
+          <h1>Subreddit Rundown</h1>
           <form
             onSubmit={event => {
               event.preventDefault();
